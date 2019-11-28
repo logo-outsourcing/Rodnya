@@ -39,7 +39,6 @@ $('.header__slider').slick({
     infinite: true,
     speed: 3000,
     centerPadding: 0,
-    adaptiveHeight: true,
     dotsClass: ' slick-dots header__dots dots',
 
 });
@@ -72,6 +71,21 @@ $('.reviews__slider').slick({
     dotsClass: ' slick-dots reviews__dots dots',
     prevArrow: "<div class=\"reviews__prev reviews__arrow\" ></div>",
     nextArrow: "<div class=\"reviews__next reviews__arrow\" ></div>",
+
+});
+$('.gallery__slider').slick({
+    arrows: true,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    slide: "div",
+    autoplay: false,
+    infinite: true,
+    centerPadding: '50px',
+    adaptiveHeight: true,
+    dotsClass: ' slick-dots gallery__dots dots',
+    prevArrow: "<div class=\"gallery__prev gallery__arrow\" ></div>",
+    nextArrow: "<div class=\"gallery__next gallery__arrow\" ></div>",
 
 });
 
@@ -142,6 +156,8 @@ $(".modal__thank").on('click', function (e) {
     $('#modal-org').parents(".overlay").removeClass("open");
     $('#modal-koord').removeClass('open');
     $('#modal-koord').parents(".overlay").removeClass("open");
+    $('#modal-smeta').removeClass('open');
+    $('#modal-smeta').parents(".overlay").removeClass("open");
     $('#modal-thanks').addClass('open');
 
 });

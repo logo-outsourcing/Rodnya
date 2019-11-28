@@ -80,8 +80,9 @@
   &__info {
     border: solid 1px #b4d3d3;
     background: #ffffff;
-    box-shadow: -2px 3px 7px rgba(0, 0, 0, 0.11);
+    box-shadow: 5px 3px 7px rgba(0, 0, 0, 0.11);
     padding: 14px;
+    margin-bottom: 200px;
   }
   &__desc {
     color: #1a1a1d;
@@ -110,5 +111,59 @@
     justify-content: space-around;
     width: 100%;
   }
-}
+  &__up{
+    color: #1a1a1d;
+    font-family: 'Helvetica-Light',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    text-transform: uppercase;
+    opacity: 0.75;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-decoration: none;
+  }
+  &__icon{
+    transform: rotate(-90deg);
+  }
+  &__dots{
+    display: flex;
+    top: 625px;
+    bottom: auto;
 
+  }
+  &__arrow {
+    position: absolute;
+    width: 55px;
+    right: auto;
+    height: 69px;
+    margin: 0;
+    top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(248.03deg, #B4D3D3 8.66%, #D9E7E7 94.48%);
+  }
+  &__prev {
+    transform: rotate(180deg);
+    left: 0;
+
+    &:after {
+      content: url("../../img/arrow-black.svg");
+    }
+  }
+  &__next {
+    left: 55px;
+    &:after {
+      content: url("../../img/arrow-black.svg");
+    }
+  }
+}
+.gallery__dots li button:before {
+  transform: rotate(90deg);
+}
+.gallery__dots li.slick-active button:before {
+  top: 30px;
+  left: 5px;
+}
