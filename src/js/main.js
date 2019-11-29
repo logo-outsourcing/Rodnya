@@ -53,9 +53,13 @@ $('.services__slider').slick({
     centerPadding: '20px',
     adaptiveHeight: true,
     dotsClass: ' slick-dots services__dots dots',
-    prevArrow: "<div class=\"services__prev services__arrow\" ></div>",
-    nextArrow: "<div class=\"services__next services__arrow\" ></div>",
 
+});
+$('.services__prev').on('click', function() {
+    $('.services__slider').slick('slickPrev');
+});
+$('.services__next').on('click', function() {
+    $('.services__slider').slick('slickNext');
 });
 
 $('.reviews__slider').slick({
@@ -69,9 +73,13 @@ $('.reviews__slider').slick({
     centerPadding: '20px',
     adaptiveHeight: true,
     dotsClass: ' slick-dots reviews__dots dots',
-    prevArrow: "<div class=\"reviews__prev reviews__arrow\" ></div>",
-    nextArrow: "<div class=\"reviews__next reviews__arrow\" ></div>",
 
+});
+$('.reviews__prev').on('click', function() {
+    $('.reviews__slider').slick('slickPrev');
+});
+$('.reviews__next').on('click', function() {
+    $('.reviews__slider').slick('slickNext');
 });
 $('.gallery__slider').slick({
     arrows: true,
