@@ -28,6 +28,7 @@
 @media screen and (max-width: 1200px) {
   .content-wrapper {
     background-position: bottom right;
+    background-size: 100%;
   }
 
   .reviews__arrow {
@@ -38,7 +39,21 @@
     bottom: 15%;
   }
 }
-
+@media screen and (max-width: 1140px){
+  .services__dots {
+    left: 42%;
+    bottom: -25px;
+    flex-direction: row;
+  }
+  .services__dots li.slick-active button:before {
+    left: 5px;
+    transform: rotate(90deg);
+    top: 35px;
+  }
+  .content-wrapper {
+    background-position: bottom ;
+  }
+}
 @media screen and (max-width: 992px) {
   .header__title {
     font-size: 30px;
@@ -71,7 +86,20 @@
   .services:after {
     right: 42%;
   }
-
+  .services__numeral {
+    width: 4%;
+  }
+  .services__wrapper {
+    width: 96%;
+  }
+  .services__info {
+    padding: 3%;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  .services__picture {
+    width: 50%;
+  }
   .modal__info {
     width: 300px;
     padding: 40px 15px;
@@ -81,14 +109,10 @@
     bottom: 30%;
   }
 
-  .reviews__prev {
-    left: 0;
+  .reviews__button {
+    left: 12%;
+    bottom: 0;
   }
-
-  .reviews__next {
-    left: 7%;
-  }
-
   .projects__box {
     flex-direction: column;
   }
@@ -119,6 +143,9 @@
   .header__title--three:after,
   .header__title--fo:after {
     display: none;
+  }
+  .contacts__meeting {
+    padding: 15px 3% 15px 3%;
   }
 }
 
@@ -173,11 +200,16 @@
   .header__wrap {
     height: auto;
   }
+  .header__dots {
+    right: -90px;
+  }
 
   .about__wrapper {
     flex-direction: column;
   }
-
+  .about__paragraph:first-letter {
+    padding: 3% 1% 0 0;
+  }
   .about__picture {
     width: 40%;
     margin: 0 auto 20px;
@@ -185,6 +217,7 @@
 
   .about__wrap {
     width: 100%;
+    padding: 0;
   }
 
   .about__list {
@@ -225,7 +258,7 @@
   }
 
   .contacts__picture {
-    width: 85%;
+    width: 63%;
     margin: 0 auto 20px;
   }
 
@@ -303,9 +336,12 @@
   .services__wrapper {
     flex-direction: column;
   }
-
+  .services__picture {
+    width: 100%;
+  }
   .services__info {
-    width: 85%;
+    width: 100%;
+    padding: 10%;
   }
 
   .reviews__wrapper {
@@ -318,7 +354,7 @@
   }
 
   .reviews__dots {
-    bottom: -35px;
+    bottom: -30px;
   }
 
   .reviews__arrow {
@@ -344,6 +380,15 @@
   .gallery__album {
     width: 52%;
   }
+  .services__dots {
+    left: 30%;
+    bottom: -40px;
+  }
+  .reviews__button {
+    left: auto;
+    right: 0;
+    bottom: -82px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -356,7 +401,7 @@
   }
 
   .header__dots {
-    bottom: 15%;
+    right: -9%;
   }
 
   .header__inner {
@@ -411,10 +456,6 @@
     box-sizing: border-box;
   }
 
-  .services__picture {
-    width: 100%;
-  }
-
   .services__subtitle {
     font-size: 20px;
     text-align: center;
@@ -423,7 +464,15 @@
   .services__slider {
     flex-direction: column;
   }
-
+  .services__wrap {
+    padding:  8px;
+  }
+  .services__price {
+    width: 50%;
+  }
+  .services__arrow {
+    height: 85px;
+  }
   .swiper-container.services__container {
     height: 654px;
   }
@@ -470,9 +519,12 @@
   .reviews__numeral {
     display: none;
   }
-
+  .reviews__button {
+    width: 83px;
+  }
   .projects__button {
     width: 85%;
+    padding: 22px 7px;
   }
 
   .projects__wrapper {
@@ -502,5 +554,14 @@
 
   .gallery__album {
     width: 100%;
+  }
+  .services__wrapper {
+    width: 93%;
+  }
+  .services__numeral {
+    width: 7%;
+  }
+  .contacts__picture {
+    width: 85%;
   }
 }

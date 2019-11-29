@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -12,7 +12,7 @@
 
     <link href="style/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header  ">
@@ -80,7 +80,7 @@
         <div class='modal' id='modal-tel'>
             <div class='content content-row'>
                 <div class="modal__picture">
-                    <img src="img/modal.jpeg" class="image" alt="wedding">
+                    <img src="img/modal.jpeg" class="image modal__image" alt="wedding">
                 </div>
                 <div class="modal__info">
                     <h2 class="title modal__title">Оставить заявку</h2>
@@ -101,9 +101,10 @@
         </div>
         <div class="modal" id="modal-thanks">
             <div class="content content-row">
-                <div class="modal__info">
+                <div class="modal__info modal__info--thank">
                     <h2 class="title modal__title">Спасибо, данные успешно отправлены!</h2>
-                    <button class="button-blue content-row modal__button btn close-modal" data-modal="#modal-thanks">
+                    <button class="button-blue content-row modal__button btn close-modal modal__button--thank"
+                            data-modal="#modal-thanks">
                         Вернуться на главную <img src="img/arrow-white.svg" alt="arrow"></button>
                 </div>
             </div>
@@ -211,10 +212,36 @@
                 </div>
             </div>
         </div>
-        <button class="content-row header__request">
-            <span class="button-blue header__request--text">Оставить заявку</span>
-            <span class="button-white header__request--arrow"><img src="img/arrow.svg" alt="arrow"></span>
+        <button class="content-row header__request btn open-modal" data-modal="#modal-prof">
+            <span class="button-blue header__request--text btn open-modal"
+                  data-modal="#modal-prof">Оставить заявку</span>
+            <span class="button-white header__request--arrow btn open-modal" data-modal="#modal-prof"><img
+                    src="img/arrow.svg" alt="arrow"></span>
         </button>
+        <div class='modal' id='modal-prof'>
+            <div class='content content-row'>
+                <div class="modal__picture">
+                    <img src="img/modal-2.jpeg" class="image modal__image" alt="wedding">
+                </div>
+                <div class="modal__info">
+                    <h2 class="title modal__title">Помощь в выборе специалистов</h2>
+                    <p class="modal__text">Еще более подробное описание услуги
+                        с пояснением варирования стоимости</p>
+                    <p class="modal__text"> Указать плюсы услуги, наши обязанности, какие гарантии предоставляем.
+                        Продумать какая информация здесь должна быть!!!
+                    </p>
+                    <p class="modal__text modal__text--bold"> Остались еще вопросы? Давайте встретимся и проведем
+                        консультацию. Это бесплатно!</p>
+                    <form class="modal__form">
+                        <input class="modal__input modal__input--phone" placeholder="Ваш Телефон">
+                        <button class="button-blue content-row modal__button btn open-modal modal__thank"
+                                data-modal="#modal-thanks">Перезвонить мне <img src="img/arrow-white.svg" alt="arrow">
+                        </button>
+                    </form>
+                </div>
+                <button class='btn close-modal modal__close' data-modal="#modal-prof">x</button>
+            </div>
+        </div>
     </div>
 </header>
 <section class="about content-container">
@@ -256,7 +283,7 @@
             </div>
             <span class="about__info">Задайте нам любой вопрос и получите бесплатную консультацию в ближайшее время!</span>
             <div class="content-row about__box">
-                <button class="button-blue about__button">Позвонить</button>
+                <button class="button-blue about__button btn open-modal" data-modal="#modal-tel">Позвонить</button>
                 <button class="button-white about__button btn open-modal" data-modal="#modal-quest">Задать вопрос
                 </button>
             </div>
@@ -265,7 +292,7 @@
     <div class='modal' id='modal-quest'>
         <div class='content content-row'>
             <div class="modal__picture">
-                <img src="img/modal.jpeg" class="image" alt="wedding">
+                <img src="img/modal.jpeg" class="image modal__image" alt="wedding">
             </div>
             <div class="modal__info">
                 <h2 class="title modal__title">Задайте вопрос</h2>
@@ -359,8 +386,9 @@
                 </div>
             </a>
         </div>
-        <button class="button-blue projects__button content-row">Смотреть все проекты <img src="img/arrow-white.svg">
-        </button>
+        <a href="project.html" class="button-blue projects__button content-row">Смотреть все проекты <img
+                src="img/arrow-white.svg" alt="arrow">
+        </a>
     </section>
     <section class="services ">
         <div class="content-container">
@@ -380,7 +408,7 @@
                                         банкета</p>
                                     <button class="button-blue content-row services__button btn open-modal"
                                             data-modal="#modal-org">Подробнее<img
-                                            src="img/arrow-white.svg">
+                                            src="img/arrow-white.svg" alt="arrow">
                                     </button>
                                 </div>
                                 <div class="services__picture">
@@ -405,7 +433,7 @@
                                         или более специалистов в зависимости от сложности проекта</p>
                                     <button class="button-blue content-row services__button btn open-modal"
                                             data-modal="#modal-koord">Подробнее<img
-                                            src="img/arrow-white.svg">
+                                            src="img/arrow-white.svg" alt="arrow">
                                     </button>
                                 </div>
                                 <div class="services__picture">
@@ -431,7 +459,7 @@
                                         банкета</p>
                                     <button class="button-blue content-row services__button btn open-modal"
                                             data-modal="#modal-org">Подробнее<img
-                                            src="img/arrow-white.svg">
+                                            src="img/arrow-white.svg" alt="arrow">
                                     </button>
                                 </div>
                                 <div class="services__picture">
@@ -456,7 +484,7 @@
                                         или более специалистов в зависимости от сложности проекта</p>
                                     <button class="button-blue content-row services__button btn open-modal"
                                             data-modal="#modal-koord">Подробнее<img
-                                            src="img/arrow-white.svg">
+                                            src="img/arrow-white.svg" alt="arrow">
                                     </button>
                                 </div>
                                 <div class="services__picture">
@@ -902,11 +930,13 @@
             </div>
 
             <div class="content-row  contacts__wrapper">
-                <button class="button-white contacts__telephone content-row"><img src="img/telephone.jpeg"
-                                                                                  alt="telephone"
-                                                                                  class="contacts__icon">Ваш Телефон
+                <button class="button-white contacts__telephone content-row btn open-modal" data-modal="#modal-tel"><img
+                        src="img/telephone.jpeg"
+                        alt="telephone"
+                        class="contacts__icon">Ваш Телефон
                 </button>
-                <button class="button-blue contacts__meeting content-row">Договориться на встречу<img
+                <button class="button-blue contacts__meeting content-row btn open-modal" data-modal="#modal-tel">
+                    Договориться на встречу<img
                         src="img/arrow-white.svg" alt="arrow" class="contacts__meeting--icon"></button>
             </div>
         </div>
@@ -914,7 +944,7 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

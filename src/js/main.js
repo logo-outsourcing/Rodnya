@@ -166,6 +166,8 @@ $(".modal__thank").on('click', function (e) {
     $('#modal-koord').parents(".overlay").removeClass("open");
     $('#modal-smeta').removeClass('open');
     $('#modal-smeta').parents(".overlay").removeClass("open");
+    $('#modal-prof').removeClass('open');
+    $('#modal-prof').parents(".overlay").removeClass("open");
     $('#modal-thanks').addClass('open');
 
 });
