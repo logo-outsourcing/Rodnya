@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" >
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header  content-container gallery__header">
+<header class="header gallery__header">
     <div class="content-row header__heading ">
         <nav class=" header__navbar content-row">
             <button class=" header__burger">
@@ -45,7 +45,7 @@
         </div>
     </div>
     <div class="header__hidden">
-        <div class="content-row content-container header__heading  header__fixed">
+        <div class="content-row  header__heading  header__fixed">
             <nav class=" header__navbar header__navbar--fixed content-row ">
                 <button class=" header__burger ">
                     <img src="img/burger.svg" alt="Open menu">
@@ -75,47 +75,55 @@
             </div>
         </div>
     </div>
-    <div class='modal' id='modal-tel'>
-        <div class='content content-row'>
-            <div class="modal__picture">
-                <img src="img/modal.jpeg" class="image" alt="wedding">
+    <div class="content-container header__box">
+        <div class='modal' id='modal-tel'>
+            <div class='content content-row'>
+                <div class="modal__picture">
+                    <img src="img/modal.jpeg" class="image modal__image" alt="wedding">
+                </div>
+                <div class="modal__info">
+                    <h2 class="title modal__title">Оставить заявку</h2>
+                    <p class="modal__text">Какой-нибудь ахуенный текст почему нужно оставить заявку у нас и что он/она
+                        получит от этого</p>
+                    <p class="modal__text"> И еще что то)))</p>
+                    <p class="modal__text modal__text--bold">Перезвоним вам в течение 15 минут</p>
+                    <form class="modal__form">
+                        <input class="modal__input modal__input--avatar" placeholder="Имя">
+                        <input class="modal__input modal__input--phone" placeholder="Ваш Телефон">
+                        <button class="button-blue content-row modal__button btn open-modal modal__thank"
+                                data-modal="#modal-thanks">Перезвонить мне <img src="img/arrow-white.svg" alt="arrow">
+                        </button>
+                    </form>
+                </div>
+                <button class='btn close-modal modal__close' data-modal="#modal-tel">x</button>
             </div>
-            <div class="modal__info">
-                <h2 class="title modal__title">Оставить заявку</h2>
-                <p class="modal__text">Какой-нибудь ахуенный текст почему нужно оставить заявку у нас и что он/она
-                    получит от этого</p>
-                <p class="modal__text"> И еще что то)))</p>
-                <p class="modal__text modal__text--bold">Перезвоним вам в течение 15 минут</p>
-                <form class="modal__form">
-                    <input class="modal__input modal__input--avatar" placeholder="Имя">
-                    <input class="modal__input modal__input--phone" placeholder="Ваш Телефон">
-                    <button class="button-blue content-row modal__button btn open-modal modal__thank"
-                            data-modal="#modal-thanks">Перезвонить мне <img src="img/arrow-white.svg" alt="arrow">
-                    </button>
-                </form>
-            </div>
-            <button class='btn close-modal modal__close' data-modal="#modal-tel">x</button>
         </div>
-    </div>
-    <div class="modal" id="modal-thanks">
-        <div class="content content-row">
-            <div class="modal__info">
-                <h2 class="title modal__title">Спасибо, данные успешно отправлены!</h2>
-                <button class="button-blue content-row modal__button btn close-modal" data-modal="#modal-thanks">
-                    Вернуться на главную <img src="img/arrow-white.svg" alt="arrow"></button>
+        <div class="modal" id="modal-thanks">
+            <div class="content content-row">
+                <div class="modal__info modal__info--thank">
+                    <h2 class="title modal__title">Спасибо, данные успешно отправлены!</h2>
+                    <button class="button-blue content-row modal__button btn close-modal modal__button--thank"
+                            data-modal="#modal-thanks">
+                        Вернуться на главную <img src="img/arrow-white.svg" alt="arrow"></button>
+                </div>
             </div>
         </div>
     </div>
 </header>
 <section class="gallery content-container" id="gallery">
     <h2 class="title gallery__title">Проекты</h2>
-    <div class="gallery__slider" >
+    <div class="gallery__arrow content-row">
+        <div class="gallery__prev content-row"><img src="img/arrow-black.svg" alt="prev"></div>
+        <div class="gallery__next content-row"><img src="img/arrow-black.svg" alt="next"></div>
+    </div>
+    <div class="gallery__slider">
         <div>
             <div class="content-row gallery__wrap">
                 <div>
                     <div class="gallery__block">
                         <span class="gallery__data">07 / 07 / 2018</span>
                         <span class="gallery__name">Павел и Ирина</span>
+
                     </div>
                     <a href="#" class="gallery__link gallery__link--active">Фото</a>
                     <a href="#" class="gallery__link">Видео</a>
@@ -141,7 +149,8 @@
                                 <span class="gallery__value">785.000 рублей</span>
                             </li>
                         </ul>
-                        <button class="button-blue content-row gallery__button btn open-modal" data-modal="#modal-smeta">Получить смету <img
+                        <button class="button-blue content-row gallery__button btn open-modal"
+                                data-modal="#modal-smeta">Получить смету <img
                                 src="img/arrow-white.svg" alt="arrow"></button>
                     </div>
                 </div>
@@ -567,7 +576,7 @@
             </div>
         </div>
     </div>
-    <a href="#gallery" class="gallery__up"><img src="img/arrow-black.svg" alt="up" class="gallery__icon">Наверх</a>
+    <a href="#gallery" class="gallery__up content-row"><img src="img/arrow-black.svg" alt="up" class="gallery__icon">Наверх</a>
     <div class='modal' id='modal-smeta'>
         <div class='content content-row'>
             <div class="modal__picture">
@@ -593,7 +602,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

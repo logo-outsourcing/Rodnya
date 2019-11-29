@@ -1,4 +1,6 @@
 "use strict";
+// Menu-burger open
+
 (function ($) {
     $('.header__burger').click(function (e) {
         e.preventDefault();
@@ -14,6 +16,9 @@
         return false;
     });
 })(jQuery);
+
+//site header scroll open
+
 $(window).scroll(function () {
     if (window.pageYOffset >= 600) {
         $(".header__hidden").addClass("header__heading--fixed");
@@ -22,6 +27,11 @@ $(window).scroll(function () {
         $(".header__hidden").removeClass("header__heading--fixed");
     }
 });
+
+// slick slider
+
+//dot add "0"
+
 $(document).ready(function () {
     $(".dots li button").each(function () {
         $(this).text("0" + $(this).text())
@@ -29,6 +39,7 @@ $(document).ready(function () {
 
 });
 
+//header slider
 $('.header__slider').slick({
     arrows: false,
     dots: true,
@@ -42,6 +53,9 @@ $('.header__slider').slick({
     dotsClass: ' slick-dots header__dots dots',
 
 });
+
+//services slider
+
 $('.services__slider').slick({
     arrows: true,
     dots: true,
@@ -55,12 +69,15 @@ $('.services__slider').slick({
     dotsClass: ' slick-dots services__dots dots',
 
 });
-$('.services__prev').on('click', function() {
+
+$('.services__prev').on('click', function () {
     $('.services__slider').slick('slickPrev');
 });
-$('.services__next').on('click', function() {
+$('.services__next').on('click', function () {
     $('.services__slider').slick('slickNext');
 });
+
+//reviews slider
 
 $('.reviews__slider').slick({
     arrows: true,
@@ -75,12 +92,15 @@ $('.reviews__slider').slick({
     dotsClass: ' slick-dots reviews__dots dots',
 
 });
-$('.reviews__prev').on('click', function() {
+$('.reviews__prev').on('click', function () {
     $('.reviews__slider').slick('slickPrev');
 });
-$('.reviews__next').on('click', function() {
+$('.reviews__next').on('click', function () {
     $('.reviews__slider').slick('slickNext');
 });
+
+//gallery slider
+
 $('.gallery__slider').slick({
     arrows: true,
     dots: true,
@@ -92,10 +112,16 @@ $('.gallery__slider').slick({
     centerPadding: '50px',
     adaptiveHeight: true,
     dotsClass: ' slick-dots gallery__dots dots',
-    prevArrow: "<div class=\"gallery__prev gallery__arrow\" ></div>",
-    nextArrow: "<div class=\"gallery__next gallery__arrow\" ></div>",
 
 });
+$('.gallery__next').on('click', function () {
+    $('.gallery__slider').slick('slickNext');
+});
+$('.gallery__prev').on('click', function () {
+    $('.gallery__slider').slick('slickPrev');
+});
+
+//about tabs
 
 $(document).ready(function () {
 
@@ -110,6 +136,9 @@ $(document).ready(function () {
     })
 
 });
+
+// modal
+
 $(".modal").each(function () {
     $(this).wrap('<div class="overlay"></div>')
 });
@@ -171,3 +200,6 @@ $(".modal__thank").on('click', function (e) {
     $('#modal-thanks').addClass('open');
 
 });
+
+
+//header slider animation
